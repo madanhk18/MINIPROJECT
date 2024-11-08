@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Transcript to Notes Converter",
+    "version": "1.0",
+    "description": "Converts YouTube video transcripts to detailed notes.",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+    },
+    "permissions": ["activeTab"]
+  }
+}
+  

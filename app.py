@@ -1,4 +1,5 @@
 import streamlit as st
+from flask import Flask
 from dotenv import load_dotenv
 load_dotenv() 
 import os
@@ -20,7 +21,8 @@ def extract_transcript_details(youtube_video_url):
         return transcript_text
 
     except Exception as e:
-        st.error(f"Error retrieving transcript: {e}")
+        st.error("Error retrieving transcript: {}".format(e))
+        # st.error(f"Error retrieving transcript: {e}")
         return None
 
 def generate_gemini_content(transcript_text, prompt):
@@ -46,7 +48,6 @@ clean_youtube=" "
 if clean_youtube:
     clean_youtube_link = split_url_at_ampersand(youtube_link)
     
-
 
 if clean_youtube_link:
     video_id = clean_youtube_link.split("=")[1]

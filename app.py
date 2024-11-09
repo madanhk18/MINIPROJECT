@@ -1,4 +1,4 @@
-import streamlit as st
+
 from flask import Flask
 from dotenv import load_dotenv
 load_dotenv() 
@@ -36,7 +36,10 @@ def generate_gemini_content(transcript_text, prompt):
         return None
     
 st.title("YouTube Transcript to Detailed Notes Converter")
-
+st.write("Steps:")
+st.write("1. Go to YouTube video in your Desktop/Laptop")
+st.write("2. Right click on the video")
+st.write("3. Copy the link address & paste it down below")
 st.title("Enter your URL")
 youtube_link = st.text_input("Enter YouTube video link")
 

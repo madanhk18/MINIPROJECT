@@ -1,7 +1,10 @@
-
+import streamlit as st
+import os
 from flask import Flask
 from dotenv import load_dotenv
 load_dotenv() 
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+print(GOOGLE_API_KEY)
 import os
 import google.generativeai as genai
 from youtube_transcript_api import YouTubeTranscriptApi

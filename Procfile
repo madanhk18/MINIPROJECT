@@ -1,2 +1,2 @@
-web: streamlit run your_actual_filename.py --server.port $PORT
+web: streamlit run app.py --server.port $PORT
 

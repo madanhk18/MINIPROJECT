@@ -4,10 +4,12 @@ from flask import Flask
 from dotenv import load_dotenv
 load_dotenv() 
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
-print(GOOGLE_API_KEY)
 import os
 import google.generativeai as genai
 from youtube_transcript_api import YouTubeTranscriptApi
+
+# from youtube_transcript_api import YouTubeTranscriptApi
+
 
 # Configure the API key for Google Generative AI
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
